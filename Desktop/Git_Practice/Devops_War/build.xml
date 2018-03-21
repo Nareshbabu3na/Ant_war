@@ -5,10 +5,8 @@
 	</target>
 	<target name="package" depends="compile" description="packageing the files">
 		<mkdir dir="build/war"/>
-		<war destfile="build/war/HelloWorld.war" needxmlfile="true" webxml="WebContent/WEB-INF/web.xml">
-			<fileset dir="WebContent"/>
-			<lib dir="WebContent/WEB-INF/lib"/>
-			<classes dir="build/classes"/>
+		<war destfile="build/war/HelloWorld.war" needxmlfile="true" >
+				<classes dir="build/classes"/>
 		</war>
 		<!-- <jar destfile="build/jars/HelloWorld.jar" basedir="build/classes"> -->
 			<!-- <manifest> -->
